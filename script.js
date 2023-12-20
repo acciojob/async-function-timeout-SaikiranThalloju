@@ -12,18 +12,15 @@ btn.addEventListener("click", async () => {
 
   // Validate input
    if (textValue.trim() === '' || isNaN(delayValue) || delayValue < 0) {
-  //   alert('Please enter valid text and delay values.');
-     output.innerText = '';
+  //   alert('Please enter valid text and delay values.');   
 	return;
-  // }
+   }
 
-  output.innerText = '';
+  // output.innerText = '';
 
   const waitForDelay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
   await waitForDelay(delayValue);
-
-  // Display the text after the delay
   output.innerText = textValue;
 });
 
